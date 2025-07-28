@@ -131,8 +131,7 @@ float MaterialManager::getDensity(std::string const& modname)
   if (mDensityMap.find(modname) != mDensityMap.end()) {
     return o2::conf::SimMaterialParams::Instance().globalDensityFactor * mDensityMap[modname];
   }
-  LOG(warning) << "MaterialManager::getDensity: Material '" << modname
-                 << "' not found in density map. Returning 0.";
+  LOG(warning) << "MaterialManager::getDensity: Material '" << modname << "' not found in density map. Returning 0.";
   return 0.0;
 }
 
